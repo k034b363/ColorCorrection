@@ -1,2 +1,4 @@
 streamlit
 plantcv
+numpy
+cv2
