@@ -1,4 +1,4 @@
 streamlit
 plantcv
 numpy
-opencv-python
+opencv-python-headless
