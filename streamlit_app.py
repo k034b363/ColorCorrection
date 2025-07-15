@@ -18,6 +18,10 @@ tab1, tab2 = st.tabs(["Original", "Color Corrected"])
 if uploaded_file:
     file_bytes = np.asarray(bytearray(uploaded_file.read()), dtype=np.uint8)
     image = cv2.imdecode(file_bytes, cv2.IMREAD_COLOR)
+    # flip channels
+    image = cv2.merge((img_data[:, :, [2]],
+                       img_data[:, :, [1]],
+                       img_data[:, :, [0]]))
     
     # Do the color correction and show both in tabs
     cc = pcv.transform.auto_correct_color(image)
