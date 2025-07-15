@@ -1,4 +1,4 @@
 streamlit
-git+https://github.com/danforthcenter/plantcv.git
+plantcv
 numpy
 opencv-python-headless
