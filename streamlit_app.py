@@ -17,7 +17,7 @@ tab1, tab2 = st.tabs(["Original", "Color Corrected"])
 # Read in array once a file has been uploaded
 if uploaded_file:
     file_bytes = np.asarray(bytearray(uploaded_file.read()), dtype=np.uint8)
-    image = cv2.imdecode(file_bytes, cv2.IMREAD_COLOR)
+    image = cv2.imdecode(file_bytes, cv2.IMREAD_BGR)
     
     # Do the color correction and show both in tabs
     cc = pcv.transform.auto_correct_color(image)
