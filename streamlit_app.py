@@ -19,12 +19,12 @@ if uploaded_file:
     file_bytes = np.asarray(bytearray(uploaded_file.read()), dtype=np.uint8)
     image = cv2.imdecode(file_bytes, cv2.IMREAD_COLOR)
     # flip channels
-    image = cv2.merge((image[:, :, [2]],
+    image_flipped = cv2.merge((image[:, :, [2]],
                        image[:, :, [1]],
                        image[:, :, [0]]))
     
     # Do the color correction and show both in tabs
-    cc = pcv.transform.auto_correct_color(image)
+    cc = pcv.transform.auto_correct_color(image_flipped)
 
-    tab1.image(image, use_column_width=True)
+    tab1.image(image_flipped, use_column_width=True)
     tab2.image(cc, use_column_width=True)
