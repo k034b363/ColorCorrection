@@ -24,7 +24,7 @@ if uploaded_file:
                        image[:, :, [0]]))
     
     # Do the color correction and show both in tabs
-    cc = pcv.transform.auto_correct_color(image)
+    cc = pcv.transform.auto_correct_color(image_flipped)
 
     tab1.image(image_flipped, use_column_width=True)
     tab2.image(cc, use_column_width=True)
