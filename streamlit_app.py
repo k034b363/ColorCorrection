@@ -1,6 +1,6 @@
 import streamlit as st
-import plantcv.plantcv as pcv
 import cv2
+import plantcv.plantcv as pcv
 import numpy as np
 
 # Don't know if this is necessary, but just in case
