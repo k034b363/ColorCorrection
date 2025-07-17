@@ -24,7 +24,7 @@ if uploaded_file:
                        image[:, :, [0]]))
     
     # Do the color correction and show both in tabs
-    cc = pcv.transform.auto_correct_color(image_flipped)
+    cc = pcv.transform.auto_correct_color(image)
     cc_flipped = cv2.merge((cc[:, :, [2]],
                        cc[:, :, [1]],
                        cc[:, :, [0]]))
