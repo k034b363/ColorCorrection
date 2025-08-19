@@ -1,4 +1,4 @@
-streamlit
-opencv-contrib-python
-plantcv
 numpy
+opencv-python-headless
+streamlit
+plantcv
