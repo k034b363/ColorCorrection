@@ -1,4 +1,7 @@
 numpy
 opencv-contrib-python-headless
+opencv-python
+opencv-python-headless
+opencv-contrib-python
 streamlit
 plantcv
